@@ -1,0 +1,64 @@
+CREATE TABLE `admin_model` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `admin_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `attendance` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `date` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `empid` int DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `employee_details` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `dob` varchar(255) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_rgpbhok005dx83l2cn6t2prn` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `leave_details` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `duration` varchar(255) DEFAULT NULL,
+  `empid` int DEFAULT NULL,
+  `enddate` varchar(255) DEFAULT NULL,
+  `leavetype` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `startdate` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `salary` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `amount` int DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `empid` int DEFAULT NULL,
+  `month` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `timesheet` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `activity` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `empid` int DEFAULT NULL,
+  `intime` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `outime` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
